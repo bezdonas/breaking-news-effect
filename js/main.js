@@ -29,7 +29,7 @@ g.Breaking = function () {
 	// Variables
 	var link = $('#thumb1'),
 		full = link.attr('href'),
-		img = $('#full1');
+		img = link.find('.thumbnail__img');
 
 
 	// Funcs
@@ -41,7 +41,9 @@ g.Breaking = function () {
 		// Common zone
 
 		// Variables
+		s: {
 
+		},
 
 		// Funcs
 		init: function() {
@@ -50,8 +52,9 @@ g.Breaking = function () {
 		},
 
 		preloadFull: function() {
-			var img = new Image;
-			img.src = full;
+			var fullImg = new Image;
+			fullImg.src = full;
+			fullImg = $(fullImg);
 		},
 
 		bindClick: function() {
@@ -67,11 +70,39 @@ g.Breaking = function () {
 
 			// Variables
 			var w = $(window),
+				b = $('body'),
 				wHeight = w.height(),
-				wWidth = w.width();
+				wWidth = w.width(),
+				imgHeight = img.height(),
+				imgWidth = img.width(),
+				imgRatio = imgWidth / imgHeight,
+				afterMarginLeft = -(imgWidth / 2),
+				afterWidth = wHeight * imgRatio,
+				afterMarginLeft = -(afterWidth / 2);
 
-			console.log(wHeight);
-			console.log(wWidth);
+			b.addClass('body_overflow_hidden');
+
+			link.addClass('thumbnail__link_hover_disabled');
+			img.attr('src', full);
+
+			link.transition({
+
+				'height': wHeight + 'px',
+				'top': '0px',
+				'width': afterWidth + 'px',
+				'margin-top': '0px',
+				'margin-left': afterMarginLeft + 'px',
+				'rotate': '1800deg'
+
+			}, 1000, 'easeOutCubic', function() {
+
+				// for some reason just callback is not enough
+				window.setTimeout(function() {
+					b.removeClass('body_overflow_hidden');
+				}, 500)
+
+			});
+
 		}
 
 

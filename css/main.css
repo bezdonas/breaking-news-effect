@@ -60,21 +60,21 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/*
- * STRUCTURE
- */
-
-body {
-    background: black;
-}
-
 
 /* 
  * BLOCKS
  */
 
+/* Body */
+.body {
+    background: black;
+}
+.body_overflow_hidden {
+    overflow: hidden;
+}
+
 /* Main wrapper */
-.b-main-wrapper {
+.main-wrapper {
 
 }
 
@@ -97,7 +97,7 @@ body {
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
-.thumbnail__link:hover {
+.thumbnail__link:not(.thumbnail__link_hover_disabled):hover {
     /*outline: 4px #e7e7e7 solid;*/
 
     -moz-transform: rotate(15deg);
@@ -105,8 +105,12 @@ body {
     -o-transform: rotate(15deg);
     transform: rotate(15deg);
 }
-.thumbnail__img {
+.thumbnail__link_hover_disabled {
 
+}
+.thumbnail__img {
+    height: 100%;
+    width: 100%;
 }
 
 
