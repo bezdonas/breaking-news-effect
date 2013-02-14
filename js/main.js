@@ -1,5 +1,5 @@
 /*
- *  "Breaking news" effect popup for realization of
+ *  "Breaking news" effect popup for implementation of
  *  growing and twisting block like here:
  *  http://www.youtube.com/watch?v=VXyE7UD4xXw&feature=youtu.be&t=44s
  *  via html css3 and javascript.

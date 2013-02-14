@@ -1,10 +1,10 @@
-1) Доводим анимацию до идеала:
+1) Idealize animation:
 http://www.youtube.com/watch?v=VXyE7UD4xXw&feature=youtu.be&t=44s
 
-2) Тестируем кроссбраузерность, организовываем фоллбэки, максимально оптимизируем скорость.
+2) Test cross-browser, organize fallbacks, maximize optimization
 
-3) Пробуем переделать в качестве jQuery плагина?
-   Добавляем толковый API?
-   Пилим из этого галерею?
+3) Make jQuery plugin out of this?
+   API?
+   Make gallery out of this?
 
-   Вариантов много
+   We'll see
