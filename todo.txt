@@ -1,9 +1,11 @@
-1) Idealize animation:
+- Idealize animation:
 http://www.youtube.com/watch?v=VXyE7UD4xXw&feature=youtu.be&t=44s
 
-2) Test cross-browser, organize fallbacks, maximize optimization
+- make preloader. the idea of preloader -- rotating, but not enlarging thumbnail
 
-3) Make jQuery plugin out of this?
+- Test cross-browser, organize fallbacks, maximize optimization
+
+- Make jQuery plugin out of this?
    API?
    Make gallery out of this?
 
